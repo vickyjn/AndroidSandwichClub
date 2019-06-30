@@ -76,13 +76,9 @@ public class DetailActivity extends AppCompatActivity {
                 .into(swImage);
        //Name
          swName.setText(sandwich.getMainName());
-
         //Alsoknownas
-
         if (sandwich.getAlsoKnownAs() != null && sandwich.getAlsoKnownAs().size() > 0) {
             StringBuilder aliasList = new StringBuilder();
-            //aliasList.append(sandwich.getAlsoKnownAs().get(0));
-
             for (int i = 1; i < sandwich.getAlsoKnownAs().size(); i++) {
                 if(i==sandwich.getAlsoKnownAs().size()-1){
                     aliasList.append(sandwich.getAlsoKnownAs().get(i));
@@ -106,9 +102,7 @@ public class DetailActivity extends AppCompatActivity {
        //Ingredients
         if (sandwich.getIngredients() != null && sandwich.getIngredients().size() > 0) {
             StringBuilder swIngList = new StringBuilder();
-            //swIngList.append(sandwich.getIngredients().get(0));
             for (int i = 0; i < sandwich.getIngredients().size(); i++) {
-                //swIngList.append(",");
                 if(i==sandwich.getIngredients().size()-1){
                     swIngList.append(sandwich.getIngredients().get(i));
                 }
@@ -120,7 +114,6 @@ public class DetailActivity extends AppCompatActivity {
             }
             swIngredients.setText(swIngList.toString());
         }
-
         //Description
         swDescription.setText(sandwich.getDescription());
 
